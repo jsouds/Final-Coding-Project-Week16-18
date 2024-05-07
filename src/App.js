@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import Navbar from './components/navbar'; // Import the Navbar component
+import Home from './components/home';
+import Inventory from './components/inventory';
+import Appointment from './components/appointment';
+import Confirmation from './components/confirmation';
+import AppointmentCalendar from './components/appointmentCalendar';
+import DropdownMenu from './components/dropdownMenu';
+import Events from './components/events';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar /> {/* Add the Navbar component */}
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/inventory" element={<Inventory />} />
+          <Route path="/appointmentCalendar" element={<AppointmentCalendar />} />
+          <Route path="/dropdownMenu" element={<DropdownMenu/>} />
+          <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/appointment" element={<Appointment/>} />
+          <Route path="/events" element={<Events/>} />
+        </Routes>
+      </Container>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,26 @@
+/* Define the height for the expanded dropdown */
+.navbar-nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: normal; /* Set to normal to allow multi-line text */
+    background-color: transparent;
+    border: 0;
+    line-height: 1.5; /* Adjust line height as needed */
+  }
+  
+  /* Set the height for the expanded dropdown */
+  .navbar-nav .show .dropdown-menu {
+    display: block;
+    max-height: 150px; /* Adjust the height as needed */
+    overflow: auto;
+  }
+  
+  /* Space out the links within the dropdown */
+  #basic-nav-dropdown .dropdown-item {
+    margin-right: 100px; /* Adjust the spacing as needed */
+  }
+  
